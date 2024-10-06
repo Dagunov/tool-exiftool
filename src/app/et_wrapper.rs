@@ -1,5 +1,4 @@
 use std::{
-    collections::HashMap,
     path::{Path, PathBuf},
     process::Command,
 };
@@ -47,12 +46,6 @@ impl EtVal {
 pub struct ExiftoolEntry {
     pub file_name: PathBuf,
     pub tag_entries: Vec<TagEntry>,
-}
-
-impl ExiftoolEntry {
-    pub fn as_hashmap(&self) -> HashMap<TagEntryKey, &TagEntry> {
-        self.tag_entries.iter().map(|e| (e.as_key(), e)).collect()
-    }
 }
 
 #[derive(Deserialize, Debug, Clone)]
