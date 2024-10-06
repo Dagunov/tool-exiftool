@@ -1,0 +1,17 @@
+[package]
+name = "tool-exiftool"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "toolexiftool"
+path = "src/main.rs"
+
+[dependencies]
+copypasta = "0.10.1"
+crossterm = "0.28.1"
+directories = "5.0.1"
+open = "5.3.0"
+ratatui = "0.28.1"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
